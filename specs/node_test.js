@@ -13,7 +13,7 @@ describe('Node test', function() {
   beforeEach(function() {
     car = new Vehicle('L101VLY', 110439);
     dates = new Dates(new Date(2018, 0, 19), new Date(2019, 0, 19));
-    mot = new MOT(true, 367580191855, null, ["Oil leak"]);
+    mot = new MOT(dates, true, 367580191855, null, ["Oil leak"]);
     node = new Node(mot, car, dates);
   })
 
@@ -27,12 +27,12 @@ describe('Node test', function() {
 
   it('has a tested date', function() {
     expected = new Date(2018, 0, 19);
-    assert.deepEqual(node.dates.tested, expected);
+    assert.deepEqual(node.mot.dates.tested, expected);
   })
 
   it('has a tested expiry date', function() {
     expected = new Date(2019, 0, 19);
-    assert.deepEqual(node.dates.expires, expected);
+    assert.deepEqual(node.mot.dates.expires, expected);
   })
 
   it('has a mileage', function() {

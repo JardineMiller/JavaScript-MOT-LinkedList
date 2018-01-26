@@ -1,11 +1,14 @@
 const assert = require('assert');
 const MOT = require('../models/MOT.js');
+const Dates = require('../models/dates.js');
 
 describe('MOT test', function() {
   var mot;
+  var dates;
 
   beforeEach(function() {
-    mot = new MOT(true, 367580191855, null, ["Oil leak"]);
+    dates = new Dates(new Date(2018, 0, 19), new Date(2019, 0, 19));
+    mot = new MOT(dates, true, 367580191855, null, ["Oil leak"]);
   })
 
   it('has an MOT number', function() {
@@ -22,6 +25,16 @@ describe('MOT test', function() {
 
   it('does have advisory notes', function() {
     assert.strictEqual(mot.advisoryNotes.length, 1);
+  })
+
+  it('has a tested date', function() {
+    expected = new Date(2018, 0, 19);
+    assert.deepEqual(mot.dates.tested, expected);
+  })
+
+  it('has a tested expiry date', function() {
+    expected = new Date(2019, 0, 19);
+    assert.deepEqual(mot.dates.expires, expected);
   })
 
 })
