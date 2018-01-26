@@ -1,17 +1,8 @@
-const Node = function(registration, status, dateTested, mileage, motNumber, dateExpires, reasonsForFailure, advisoryNotes) {
-  this.registration = registration;
-  this.status = status;
-  this.dateTested = dateTested;
-  this.dateExpires = dateExpires;
-  this.mileage = mileage;
-  this.motNumber = motNumber;
-  this.reasonsForFailure = reasonsForFailure;
-  this.advisoryNotes = advisoryNotes;
+const Node = function(mot, car, dates) {
+  this.mot = mot;
+  this.car = car;
+  this.dates = dates;
   this.next = null;
-}
-
-Node.prototype.result = function(first_argument) {
-  return this.status ? "pass" : "fail";
 };
 
 module.exports = Node;
