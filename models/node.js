@@ -1,7 +1,6 @@
-const Node = function(mot, car, dates) {
+const Node = function(mot, car) {
   this.mot = mot;
   this.car = car;
-  this.dates = dates;
   this.next = null;
 };
 
