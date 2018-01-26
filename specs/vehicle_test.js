@@ -1,5 +1,5 @@
 const assert = require('assert');
-const Vehicle = require('../vehicle.js');
+const Vehicle = require('../models/vehicle.js');
 
 describe('Vehicle test', function() {
   var car;

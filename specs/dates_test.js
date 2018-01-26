@@ -1,5 +1,5 @@
 const assert = require('assert');
-const Dates = require('../dates.js');
+const Dates = require('../models/dates.js');
 
 describe('Dates test', function() {
   var dates;

@@ -1,5 +1,5 @@
 const assert = require('assert');
-const MOT = require('../MOT.js');
+const MOT = require('../models/MOT.js');
 
 describe('MOT test', function() {
   var mot;

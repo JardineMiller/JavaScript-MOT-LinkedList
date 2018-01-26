@@ -1,18 +1,8 @@
-// Registration
-// Pass/Fail
-// MOT date
-// Mileage
-// MOT Number
-// Expiry
-// Reasons for failure
-// Advisory notice items
-// Next item
-
 const assert = require('assert');
-const Node = require('../node.js');
-const Vehicle = require('../vehicle.js');
-const MOT = require('../mot.js');
-const Dates = require('../dates.js');
+const Node = require('../models/node.js');
+const Vehicle = require('../models/vehicle.js');
+const MOT = require('../models/mot.js');
+const Dates = require('../models/dates.js');
 
 describe('Node test', function() {
   var node;
