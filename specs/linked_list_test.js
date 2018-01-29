@@ -44,4 +44,9 @@ describe('LinkedList test', function() {
   it('has no head when created', function() {
     assert.strictEqual(linkedList.head, null);
   })
+
+  it('can unshift items', function() {
+    assert.strictEqual(linkedList.unshift(node), 1);
+    assert.strictEqual(linkedList.head, node);
+  })
 })
