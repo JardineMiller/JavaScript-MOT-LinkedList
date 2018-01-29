@@ -49,4 +49,10 @@ describe('LinkedList test', function() {
     assert.strictEqual(linkedList.unshift(node), 1);
     assert.strictEqual(linkedList.head, node);
   })
+
+  it('can unshift multiple items', function() {
+    linkedList.unshift(node);
+    assert.strictEqual(linkedList.unshift(node2), 2);
+    assert.strictEqual(linkedList.head, node2);
+  })
 })
